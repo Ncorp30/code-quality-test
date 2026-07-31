@@ -1,14 +1,14 @@
 // Poor variable naming
-var a = 10;
-var b = 20;
+var initialValue = 10;
+var taxRate = 20;
 
 var unusedVariable = "not used";
 
 
 // Duplicate calculation logic
-function x(y, z) {
+function logSum(firstNumber, secondNumber) {
 
-    var result = y + z;
+    var result = firstNumber + secondNumber;
 
     console.log("Result:", result);
 
@@ -19,11 +19,7 @@ function x(y, z) {
 // Same logic duplicated with different names
 function calculateSum(first, second) {
 
-    var total = first + second;
-
-    console.log("Result:", total);
-
-    return total;
+    return logSum(first, second);
 }
 
 
@@ -103,7 +99,7 @@ console.log("Value is false");
 }
 
 
-x(a,b);
+logSum(initialValue,taxRate);
 
 calculateSum(5,10);
 
