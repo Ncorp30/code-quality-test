@@ -6,9 +6,9 @@ var unusedVariable = "not used";
 
 
 // Duplicate calculation logic
-function x(y, z) {
+function calculateAndLogSum(first, second) {
 
-    var result = y + z;
+    var result = first + second;
 
     console.log("Result:", result);
 
@@ -19,22 +19,24 @@ function x(y, z) {
 // Same logic duplicated with different names
 function calculateSum(first, second) {
 
-    var total = first + second;
-
-    console.log("Result:", total);
-
-    return total;
+    return calculateAndLogSum(first, second);
 }
 
 
 // Duplicate user printing logic
+function printUserDetails(name, age) {
+
+    console.log("Name:", name);
+    console.log("Age:", age);
+
+}
+
 function createUserOne() {
 
     var name = "John";
     var age = 25;
 
-    console.log("Name:", name);
-    console.log("Age:", age);
+    printUserDetails(name, age);
 
 }
 
@@ -45,18 +47,13 @@ function createUserTwo() {
     var username = "Mike";
     var userAge = 30;
 
-    console.log("Name:", username);
-    console.log("Age:", userAge);
+    printUserDetails(username, userAge);
 
 }
 
 
 // Long function with multiple responsibilities
-function processEverything() {
-
-    var number1 = 100;
-    var number2 = 50;
-
+function calculateOperations(number1, number2) {
 
     var addition = number1 + number2;
 
@@ -66,21 +63,44 @@ function processEverything() {
 
     var division = number1 / number2;
 
+    return {
+        addition: addition,
+        subtraction: subtraction,
+        multiplication: multiplication,
+        division: division
+    };
 
-    console.log(addition);
+}
 
-    console.log(subtraction);
+function logOperations(results) {
 
-    console.log(multiplication);
+    console.log(results.addition);
 
-    console.log(division);
+    console.log(results.subtraction);
 
+    console.log(results.multiplication);
+
+    console.log(results.division);
+
+}
+
+function performNotifications() {
 
     console.log("Saving data");
 
     console.log("Sending notification");
 
     console.log("Updating UI");
+
+}
+
+function processEverything() {
+
+    var results = calculateOperations(100, 50);
+
+    logOperations(results);
+
+    performNotifications();
 
 }
 
@@ -103,7 +123,7 @@ console.log("Value is false");
 }
 
 
-x(a,b);
+calculateAndLogSum(a,b);
 
 calculateSum(5,10);
 
