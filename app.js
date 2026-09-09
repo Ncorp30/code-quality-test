@@ -6,9 +6,9 @@ var unusedVariable = "not used";
 
 
 // Duplicate calculation logic
-function x(y, z) {
+function calculateSum(firstNumber, secondNumber) {
 
-    var result = y + z;
+    var result = firstNumber + secondNumber;
 
     console.log("Result:", result);
 
@@ -17,21 +17,17 @@ function x(y, z) {
 
 
 // Same logic duplicated with different names
-function calculateSum(first, second) {
+function x(y, z) {
 
-    var total = first + second;
-
-    console.log("Result:", total);
-
-    return total;
+    return calculateSum(y, z);
 }
 
 
 // Duplicate user printing logic
-function createUserOne() {
+function createUser(user) {
 
-    var name = "John";
-    var age = 25;
+    var name = user.name;
+    var age = user.age;
 
     console.log("Name:", name);
     console.log("Age:", age);
@@ -40,13 +36,12 @@ function createUserOne() {
 
 
 // Same duplicated block
-function createUserTwo() {
+function createUserOne() {
 
-    var username = "Mike";
-    var userAge = 30;
-
-    console.log("Name:", username);
-    console.log("Age:", userAge);
+    createUser({
+        name: "John",
+        age: 25
+    });
 
 }
 
