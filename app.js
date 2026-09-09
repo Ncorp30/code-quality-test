@@ -6,9 +6,9 @@ var unusedVariable = "not used";
 
 
 // Duplicate calculation logic
-function x(y, z) {
+function calculateSum(first, second) {
 
-    var result = y + z;
+    var result = first + second;
 
     console.log("Result:", result);
 
@@ -17,7 +17,7 @@ function x(y, z) {
 
 
 // Same logic duplicated with different names
-function calculateSum(first, second) {
+function calculateTotal(first, second) {
 
     var total = first + second;
 
@@ -103,9 +103,9 @@ console.log("Value is false");
 }
 
 
-x(a,b);
+calculateSum(a,b);
 
-calculateSum(5,10);
+calculateTotal(5,10);
 
 createUserOne();
 
